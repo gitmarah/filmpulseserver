@@ -55,7 +55,7 @@ const authController = {
         );
         user.refreshToken = refreshToken;
         await user.save();
-        res.cookie("refreshToken", refreshToken, {httpOnly: true, maxAge: 24 * 60 * 60 * 1000});
+        res.cookie("refreshToken", refreshToken, {httpOnly: true, sameSite: "None", secure: true, maxAge: 24 * 60 * 60 * 1000});
         res.json({token: accessToken, user: UserInfo});
         // res.send("This is the login controller");
     }

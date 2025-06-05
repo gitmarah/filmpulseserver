@@ -1,5 +1,5 @@
 const allowedOrigins = [
-    "www.google.com",
+    "https://film-pulse.netlify.app",
     "http://localhost:5173"
 ]
 
