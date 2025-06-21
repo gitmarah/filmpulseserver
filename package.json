@@ -1,5 +1,5 @@
 {
-  "name": "moviesearch",
+  "name": "filmpulse",
   "version": "1.0.0",
   "description": "RestApi for my movie search application. For managing acess and controls.",
   "license": "ISC",

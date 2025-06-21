@@ -24,9 +24,9 @@ const mailOptions = (receiverEmail) => {
     {expiresIn: "24h"}
 );
     return {
-  from: process.env.VERIFICATION_EMAIL,
+  from: `"Filmpulse" <${process.env.VERIFICATION_EMAIL}>`,
   to: receiverEmail,
-  subject: "Verify Your Email - TelaStudio",
+  subject: "Verify Your Email",
   html: `
         <div style="font-family: Arial, sans-serif; background-color: #ffffff; padding: 40px;">
         <div style="max-width: 600px; margin: auto; background-color: #fff1fc; padding: 30px; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
@@ -36,7 +36,7 @@ const mailOptions = (receiverEmail) => {
             Thank you for signing up with us. To get started, please verify your email address by clicking the button below:
             </p>
             <div style="text-align: center; margin: 30px 0;">
-            <a href="http://localhost:5173/signin/${token}" 
+            <a href="https://film-pulse.netlify.app/signin/${token}" 
                 style="display: inline-block; background-color: #da0009; color: #ffffff; text-decoration: none; padding: 14px 24px; border-radius: 6px; font-weight: bold; font-size: 16px;">
                 Verify My Email
             </a>
@@ -46,7 +46,7 @@ const mailOptions = (receiverEmail) => {
             </p>
             <hr style="border: none; border-top: 1px solid #eeeeee; margin: 30px 0;">
             <footer style="text-align: center; color: #aaaaaa; font-size: 12px;">
-            &copy; 2025 TelaStudio. All rights reserved.
+            &copy; 2025 filmpulse. All rights reserved.
             </footer>
         </div>
         </div>

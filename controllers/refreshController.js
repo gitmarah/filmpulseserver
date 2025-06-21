@@ -16,7 +16,7 @@ const refreshController = async (req, res) => {
             const accessToken = jwt.sign(
                 userInfo,
                 process.env.ACCESS_TOKEN,
-                {expiresIn: "10m"}
+                {expiresIn: "30m"}
             );
             res.json({user: userInfo, token: accessToken});
         }
